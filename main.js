@@ -1,25 +1,31 @@
-/*N athletes have advanced to triple jump finals at the games
-2022 Women's Olympians. Design a program that asks for
-keyboard the names of each finalist athlete and in turn, their
-marks of the jump in meters. Inform the name of the athlete
-champion to keep the gold medal and if she broke
-record, report the payment that will be 500 million. the record
-It is at 15.50 meters*/
+/*Develop a cyclical program that captures a data
+number each time, and accumulate them. The program will
+stops when the user types a zero. The program must
+show: THE SUM OF THE VALUES, THE VALUE OF THE
+AVERAGE, HOW MANY VALUES WERE ENTERED, GREATER
+VALUE AND LESS VALUE.*/
 
-let athleteName = [];
-let score = [];
+let listNumbers = [];
 
-do {
-    athleteName.push(prompt("Athlete Name: "));
-    score.push(parseFloat(prompt("Athlete Score (Meters / Ex: 10.2): ")));
-    
-} while (confirm("Wanna add another one?"));
-
-let record = 15.20;
-let maxScore = score.indexOf(Math.max(...score));
-
-if(maxScore > record){
-    alert(`The competitor ${athleteName[maxScore]} won the championship and broke the world record jumping ${Math.max(...score)} meters, she just earned 500 millions.`);
-} else if(maxScore <= record) {
-    alert(`The competitor ${athleteName[maxScore]} won the championship and her score was: ${Math.max(...score)}`);
+while(true){
+    let numbers = (parseInt(prompt("Enter a number: ")));
+    listNumbers.push(numbers);
+    if (numbers == 0){
+        listNumbers.pop();
+        if (true){
+            break;
+        }
+    }
 }
+
+let sum = listNumbers.reduce(function(a, b){
+    return a + b; }, 0);
+
+let average = parseInt((sum / (listNumbers.length)));
+let maxValue = listNumbers.indexOf(Math.max(...listNumbers));
+let minValue = listNumbers.indexOf(Math.min(...listNumbers));
+
+alert(`The sum of all the values is: ${sum}, the average of the values is: ${average}, the number of total added values were: ${listNumbers.length}, the greater number is: ${listNumbers[maxValue]} and the  lesser number is: ${listNumbers[minValue]}`)
+
+
+
