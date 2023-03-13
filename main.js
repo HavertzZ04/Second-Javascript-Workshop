@@ -1,17 +1,25 @@
-/*Build a algorithm for a program that inputs three
-grades of a student, if the average is less than or equal to 3.9
-display a message "Study", otherwise a message that
-say "scholarship"*/
+/*Given a number indicate if it is even or odd and if it is greater than 10*/
 
-let first = parseInt(prompt("Add the first qualification (0.0 - 5.0): "));
-let second = parseInt(prompt("Add the second qualification (0.0 - 5.0): "));
-let third = parseInt(prompt("Add the third qualification (0.0 - 5.0): "));
+let n = parseInt(prompt("Write a number: "));
 
-let average = ((first + second + third) / 3);
-
-if(average >= 4.0){
-    alert("Scholarship")
-}
-else {
-    alert("Study more next time")
-}
+    if (n % 2 == 0 && n > 10) {
+        alert("The number is even and greater than 10")
+    }
+    else if (n % 2 == 0 && n < 10) {
+        alert("The number is even and less than 10")
+    }
+    else if (n % 2 == 0 && n == 10) {
+        alert("The number is even")
+    }
+    else if (n > 10) {
+        alert("The number is odd and greater than 10")
+    }
+    else if (n < 10) {
+        alert("The number is odd and less than 10")
+    }
+    else if (n == 10) {
+        alert("The number is odd")
+    }
+    else {
+        alert("You didn't write a number :(")
+    }
