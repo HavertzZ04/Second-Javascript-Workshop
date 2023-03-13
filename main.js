@@ -1,25 +1,9 @@
-/*Given a number indicate if it is even or odd and if it is greater than 10*/
+/*
+Build the algorithm to determine the voltage of a
+circuit based on resistance and current.*/
 
-let n = parseInt(prompt("Write a number: "));
+let i = parseInt(prompt("Write the current intensity: "));
+let r = parseInt(prompt("Write the resistance: "));
+let v = (i * r);
 
-    if (n % 2 == 0 && n > 10) {
-        alert("The number is even and greater than 10")
-    }
-    else if (n % 2 == 0 && n < 10) {
-        alert("The number is even and less than 10")
-    }
-    else if (n % 2 == 0 && n == 10) {
-        alert("The number is even")
-    }
-    else if (n > 10) {
-        alert("The number is odd and greater than 10")
-    }
-    else if (n < 10) {
-        alert("The number is odd and less than 10")
-    }
-    else if (n == 10) {
-        alert("The number is odd")
-    }
-    else {
-        alert("You didn't write a number :(")
-    }
+alert(`The voltage is ${v}`);
