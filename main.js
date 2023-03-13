@@ -1,9 +1,25 @@
-/*Program that Enters by keyboard the value of the side of a square to show on the screen the
-perimeter of it and the base and height of a rectangle to show the area of ​​the
-same*/
+/*N athletes have advanced to triple jump finals at the games
+2022 Women's Olympians. Design a program that asks for
+keyboard the names of each finalist athlete and in turn, their
+marks of the jump in meters. Inform the name of the athlete
+champion to keep the gold medal and if she broke
+record, report the payment that will be 500 million. the record
+It is at 15.50 meters*/
 
-let square = parseInt(prompt("Number of one side of the square: "));
-let rectangleHight = parseInt(prompt("Hight of the rectangle"));
-let rectangleWidht = parseInt(prompt("Widht of the rectangle"));
+let athleteName = [];
+let score = [];
 
-alert(`The perimeter of the square is: ${square * 4} and the rectangle area is: ${rectangleHight * rectangleWidht}`)
+do {
+    athleteName.push(prompt("Athlete Name: "));
+    score.push(parseFloat(prompt("Athlete Score (Meters / Ex: 10.2): ")));
+    
+} while (confirm("Wanna add another one?"));
+
+let record = 15.20;
+let maxScore = score.indexOf(Math.max(...score));
+
+if(maxScore > record){
+    alert(`The competitor ${athleteName[maxScore]} won the championship and broke the world record jumping ${Math.max(...score)} meters, she just earned 500 millions.`);
+} else if(maxScore <= record) {
+    alert(`The competitor ${athleteName[maxScore]} won the championship and her score was: ${Math.max(...score)}`);
+}
