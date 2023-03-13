@@ -1,21 +1,14 @@
-/*Build the algorithm that requests the name and age of 3
-people and determine the name of the oldest person.*/
+/*Build the algorithm that reads two numbers from the keyboard,
+If the first is greater than the second, report their sum and
+difference, otherwise, inform the product and the
+division of the first by the second.*/
 
-let person1 = prompt("Name of the first person: ");
-let age1 = prompt("Age of the first person: ");
-let person2 = prompt("Name of the second person: ");
-let age2 = prompt("Age of the second person: ");
-let person3 = prompt("Name of the third person: ");
-let age3 = prompt("Age of the third person: ");
+let n1 = parseInt(prompt("First number: "));
+let n2 = parseInt(prompt("Second number: "));
 
-let total = Math.max(age1, age2, age3);
-
-if(total == age1){
-    alert(`${person1} is ${age1} years old and for that reason is the oldest`)
-}
-else if (total == age2){
-    alert(`${person2} is ${age2} years old and for that reason is the oldest`)
+if(n1 > n2){
+    alert(`${n1} is greater than ${n2}, their sume is ${(n1 + n2)} and their difference is ${(n1 - n2)}`)
 }
 else {
-    alert(`${person3} is ${age3} years old and for that reason is the oldest`)
+    alert(`${n1} is less than ${n2}, their product is ${n1 * n2} and their division is ${n2 / n1}`)
 }
