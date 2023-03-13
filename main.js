@@ -1,31 +1,18 @@
-/*Build the algorithm in Javascript for a program
-for any number of students reading the name,
-the sex and the final grade and find the student with the highest
-grade and the student with the lowest grade and how many were
-men and how many women.*/
+/*Program that requests the entry of the name and price of an item and the
+quantity carried by the customer. Show what the buyer must pay
+on your bill.*/
 
-let namesList = [];
-let sex = "";
-let gradelist = [];
-let m = [];
-let f = [];
+let names = []
+let fullTotal = 0
 
 do {
-    namesList.push(prompt("Student name: "));
+    names = prompt("Name of the product: ");
+    let price = parseInt(prompt("Price of the product: "));
+    let amount = parseInt(prompt("Amount: "));
 
-    sex = (prompt("Student gender (M or F): "));
+    let total = price * amount;
+    fullTotal += total;
 
-    if(sex == "M" || sex == "m"){
-        m.push(1);
-    } else if(sex == "F" || sex == "f"){
-        f.push(1);
-    }
+} while (confirm("Wanna continue? "));
 
-    gradelist.push(parseFloat(prompt("Definitive grade (0.0 - 5.0): ")));
-
-} while(confirm("Wanna continue? "));
-
-let maxStudent = gradelist.indexOf(Math.max(...gradelist));
-let minStudent = gradelist.indexOf(Math.min(...gradelist));
-
-alert(`${namesList[maxStudent]} had the best grade: ${Math.max(...gradelist)} and ${namesList[minStudent]} had the worst grade was ${Math.min(...gradelist)}. There were ${m.length} boys and ${f.length} girls`);
+alert(`The total amount is: ${fullTotal}`)
