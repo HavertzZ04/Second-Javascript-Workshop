@@ -1,18 +1,9 @@
-/*Program that requests the entry of the name and price of an item and the
-quantity carried by the customer. Show what the buyer must pay
-on your bill.*/
+/*Program that Enters by keyboard the value of the side of a square to show on the screen the
+perimeter of it and the base and height of a rectangle to show the area of ​​the
+same*/
 
-let names = []
-let fullTotal = 0
+let square = parseInt(prompt("Number of one side of the square: "));
+let rectangleHight = parseInt(prompt("Hight of the rectangle"));
+let rectangleWidht = parseInt(prompt("Widht of the rectangle"));
 
-do {
-    names = prompt("Name of the product: ");
-    let price = parseInt(prompt("Price of the product: "));
-    let amount = parseInt(prompt("Amount: "));
-
-    let total = price * amount;
-    fullTotal += total;
-
-} while (confirm("Wanna continue? "));
-
-alert(`The total amount is: ${fullTotal}`)
+alert(`The perimeter of the square is: ${square * 4} and the rectangle area is: ${rectangleHight * rectangleWidht}`)
